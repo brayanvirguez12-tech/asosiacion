@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán (T.P.P.G.)."
+    />
+    <title>T.P.P.G. | Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Inicio">
+          <img class="brand-logo" src="logo-tppg.jpg" alt="Logo oficial de T.P.P.G." />
+          <span>
+            <strong>T.P.P.G.</strong>
+            <small>Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html" aria-current="page">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="archivos.html">Archivos compartidos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <a href="contacto.html" class="button button-primary header-cta">Contacto</a>
+        <button class="button button-secondary auth-button" id="auth-action" type="button">Iniciar sesión</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Asociación de Técnicos de Producción de Petróleo y Gas</p>
+            <h1>Experiencia técnica que impulsa a Puerto Gaitán.</h1>
+            <p class="lead">
+              Unimos a los profesionales del sector para compartir conocimiento,
+              fortalecer la producción responsable y promover el desarrollo de
+              la industria de petróleo y gas en nuestra región.
+            </p>
+            <div class="hero-actions">
+              <a href="nosotros.html" class="button button-primary">Conoce T.P.P.G.</a>
+              <a href="noticias.html" class="button button-secondary">Ver noticias</a>
+            </div>
+            <ul class="hero-badges">
+              <li>Puerto Gaitán, Meta</li>
+              <li>Producción de petróleo y gas</li>
+              <li>Comunidad técnica</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel reveal">
+            <div class="panel-card">
+              <div class="mini-header">
+                <span class="status-dot"></span>
+                <span>Operación segura</span>
+              </div>
+              <h3>Compromiso con nuestra industria</h3>
+              <div class="metric-grid">
+                <div>
+                  <strong>T.P.P.G.</strong>
+                  <span>conocimiento técnico</span>
+                </div>
+                <div>
+                  <strong>01</strong>
+                  <span>Puerto Gaitán, Meta</span>
+                </div>
+                <div>
+                  <strong>Oil &amp; Gas</strong>
+                  <span>producción responsable</span>
+                </div>
+                <div>
+                  <strong>Red</strong>
+                  <span>profesionales y comunidad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="container trust-items">
+          <span>Seguridad</span>
+          <span>Innovación</span>
+          <span>Desarrollo profesional</span>
+          <span>Integridad</span>
+          <span>Sostenibilidad</span>
+        </div>
+      </section>
+
+      <section class="section home-links-section">
+        <div class="container home-links-grid">
+          <a class="home-link-card reveal" href="noticias.html">
+            <span class="home-link-icon">01</span>
+            <span class="eyebrow accent">Actualidad T.P.P.G.</span>
+            <strong>Noticias de la comunidad</strong>
+            <span>Publicaciones, actividades y novedades del sector.</span>
+            <span class="home-link-cta">Explorar noticias →</span>
+          </a>
+          <a class="home-link-card reveal" href="archivos.html">
+            <span class="home-link-icon">02</span>
+            <span class="eyebrow accent">Biblioteca técnica</span>
+            <strong>Archivos compartidos</strong>
+            <span>Consulta y descarga recursos publicados por la asociación.</span>
+            <span class="home-link-cta">Consultar archivos →</span>
+          </a>
+          <a class="home-link-card reveal" href="nosotros.html">
+            <span class="home-link-icon">03</span>
+            <span class="eyebrow accent">Identidad institucional</span>
+            <strong>Conoce T.P.P.G.</strong>
+            <span>Descubre nuestra misión, visión y compromiso regional.</span>
+            <span class="home-link-cta">Sobre nosotros →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section alt-bg" id="servicios">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow accent">Servicios</p>
+            <h2>Soluciones técnicas para toda la cadena del valor energético.</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="icon">01</div>
+              <h3>Perforación y completación</h3>
+              <p>Asesoría, revisión técnica y análisis de desempeño para operaciones de pozo y sistemas de terminación.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon">02</div>
+              <h3>Producción y yacimientos</h3>
+              <p>Optimización de producción, diagnóstico de presión, manejo de flujos y sostenibilidad operativa.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon">03</div>
+              <h3>Seguridad y riesgo</h3>
+              <p>Evaluación de riesgos, revisión de procedimientos, protocolos HSE y mejora continua de ciclo de vida.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon">04</div>
+              <h3>Capacitación técnica</h3>
+              <p>Cursos especializados, seminarios, mentorías y certificaciones para equipos profesionales y técnicos.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon">05</div>
+              <h3>Investigación</h3>
+              <p>Estudios aplicados, benchmarking, documentación técnica y colaboración con centros de investigación.</p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="icon">06</div>
+              <h3>Consultoría integral</h3>
+              <p>Soporte para proyectos, revisión de ingeniería, trazabilidad de datos y organización de equipos técnicos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="galeria">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow accent">Galería</p>
+            <h2>Experiencia real en operaciones, seguridad y liderazgo técnico.</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-item reveal" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');">
+              <div class="gallery-overlay">
+                <span>Perforación</span>
+                <h3>Rigs y operación de campo</h3>
+              </div>
+            </article>
+
+            <article class="gallery-item reveal" style="--bg: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80');">
+              <div class="gallery-overlay">
+                <span>Producción</span>
+                <h3>Optimización de yacimientos</h3>
+              </div>
+            </article>
+
+            <article class="gallery-item reveal" style="--bg: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80');">
+              <div class="gallery-overlay">
+                <span>Capacitación</span>
+                <h3>Formación técnica especializada</h3>
+              </div>
+            </article>
+
+            <article class="gallery-item reveal" style="--bg: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80');">
+              <div class="gallery-overlay">
+                <span>Seguridad</span>
+                <h3>Auditorías y control de riesgos</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="capacitacion">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow accent">Capacitación</p>
+            <h2>Formación práctica para destacar en cada etapa operativa.</h2>
+          </div>
+
+          <div class="training-layout">
+            <div class="training-card reveal">
+              <h3>Programas en desarrollo</h3>
+              <ul>
+                <li>Gestión de yacimientos y producción.</li>
+                <li>Control de pozo, herramientas y presión.</li>
+                <li>Evaluación de seguridad y procesos críticos.</li>
+                <li>Herramientas digitales para análisis técnico.</li>
+              </ul>
+            </div>
+
+            <div class="timeline reveal">
+              <div class="timeline-item">
+                <span class="time">01</span>
+                <div>
+                  <h4>Diagnóstico técnico</h4>
+                  <p>Identificamos necesidades, estándares y brechas de conocimiento.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">02</span>
+                <div>
+                  <h4>Diseño del programa</h4>
+                  <p>Construimos rutas de aprendizaje adaptadas a cada nivel profesional.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="time">03</span>
+                <div>
+                  <h4>Implementación</h4>
+                  <p>Ejecutamos cursos, talleres, laboratorios y acompañamiento experto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-contact-strip">
+        <div class="container home-contact-inner">
+          <div>
+            <p class="eyebrow accent">Conversemos</p>
+            <h2>El conocimiento técnico crece cuando se comparte.</h2>
+          </div>
+          <a class="button button-primary" href="contacto.html">Contactar a T.P.P.G.</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img class="brand-logo" src="logo-tppg.jpg" alt="" />
+            <span>
+              <strong>T.P.P.G.</strong>
+              <small>Técnicos de Producción de Petróleo y Gas</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#capacitacion">Capacitación</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="archivos.html">Archivos compartidos</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <p>© <span id="year"></span> T.P.P.G. Puerto Gaitán</p>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="contacto.html"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Ir a contacto"
+    >
+      Contáctanos
+    </a>
+
+    <dialog class="app-dialog" id="login-dialog" aria-labelledby="login-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow accent">Administración T.P.P.G.</p>
+          <h2 id="login-title">Iniciar sesión</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button>
+      </div>
+      <p class="demo-warning">Acceso temporal de demostración. Las credenciales y los datos guardados en este navegador no son seguros para producción.</p>
+      <form class="module-form" id="login-form">
+        <label>
+          <span>Usuario</span>
+          <input type="text" name="username" autocomplete="username" required />
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" name="password" autocomplete="current-password" required />
+        </label>
+        <p class="form-message" id="login-message" role="alert"></p>
+        <button class="button button-primary" type="submit">Entrar como administrador</button>
+      </form>
+    </dialog>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

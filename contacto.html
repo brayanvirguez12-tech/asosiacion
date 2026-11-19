@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ponte en contacto con T.P.P.G., Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán." />
+    <title>Contacto | T.P.P.G. Puerto Gaitán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contacto">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Inicio">
+          <img class="brand-logo" src="logo-tppg.jpg" alt="Logo oficial de T.P.P.G." />
+          <span><strong>T.P.P.G.</strong><small>Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="archivos.html">Archivos compartidos</a>
+          <a href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
+        <button class="button button-secondary auth-button" id="auth-action" type="button">Iniciar sesión</button>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero contact-page-hero">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Estamos para escucharte</p>
+          <h1>Conectemos.</h1>
+          <p>Comunícate con la Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán.</p>
+        </div>
+      </section>
+      <section class="section page-content">
+        <div class="container cta-wrap">
+          <div class="cta-copy reveal">
+            <p class="eyebrow accent">Contacto T.P.P.G.</p>
+            <h2>Comparte tu consulta o interés.</h2>
+            <p class="contact-note">Completa el formulario y continuaremos la conversación por WhatsApp.</p>
+            <div class="contact-address">
+              <span class="contact-marker">⌖</span>
+              <div><strong>Puerto Gaitán</strong><span>Departamento del Meta, Colombia</span></div>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contact-form">
+            <div class="field-row">
+              <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" required /></label>
+              <label><span>Correo</span><input type="email" name="email" placeholder="correo@ejemplo.com" required /></label>
+            </div>
+            <div class="field-row">
+              <label><span>Celular</span><input type="tel" name="phone" placeholder="Tu número de contacto" required /></label>
+              <label><span>Área de interés</span><select name="area"><option>Producción</option><option>Petróleo y gas</option><option>Capacitación</option><option>Asociación</option></select></label>
+            </div>
+            <label><span>Mensaje</span><textarea name="message" rows="4" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea></label>
+            <div class="contact-actions">
+              <button type="submit" class="button button-primary">Enviar solicitud</button>
+              <a href="https://wa.me/+573168849932?text=Hola%20T.P.P.G.%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20asociaci%C3%B3n." class="button button-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a href="index.html" class="brand footer-brand"><img class="brand-logo" src="logo-tppg.jpg" alt="" /><span><strong>T.P.P.G.</strong><small>Puerto Gaitán, Meta</small></span></a>
+        <div class="footer-links"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="noticias.html">Noticias</a><a href="archivos.html">Archivos compartidos</a></div>
+        <p>© <span id="year"></span> T.P.P.G. Puerto Gaitán</p>
+      </div>
+    </footer>
+    <dialog class="app-dialog" id="login-dialog" aria-labelledby="login-title">
+      <div class="dialog-heading"><div><p class="eyebrow accent">Administración T.P.P.G.</p><h2 id="login-title">Iniciar sesión</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button></div>
+      <p class="demo-warning">Acceso temporal de demostración. Las credenciales y los datos guardados en este navegador no son seguros para producción.</p>
+      <form class="module-form" id="login-form"><label><span>Usuario</span><input type="text" name="username" autocomplete="username" required /></label><label><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required /></label><p class="form-message" id="login-message" role="alert"></p><button class="button button-primary" type="submit">Entrar como administrador</button></form>
+    </dialog>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

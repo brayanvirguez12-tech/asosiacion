@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Noticias, actividades y publicaciones de T.P.P.G. Puerto Gaitán." />
+    <title>Noticias | T.P.P.G. Puerto Gaitán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="noticias">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Inicio">
+          <img class="brand-logo" src="logo-tppg.jpg" alt="Logo oficial de T.P.P.G." />
+          <span><strong>T.P.P.G.</strong><small>Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="noticias.html" aria-current="page">Noticias</a>
+          <a href="archivos.html">Archivos compartidos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <button class="button button-secondary auth-button" id="auth-action" type="button">Iniciar sesión</button>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero news-page-hero">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Comunidad T.P.P.G.</p>
+          <h1>Noticias y actualidad</h1>
+          <p>Actividades, publicaciones y novedades de la producción de petróleo y gas en Puerto Gaitán.</p>
+        </div>
+      </section>
+      <section class="section page-content">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow accent">Actualidad T.P.P.G.</p>
+            <h2>Noticias destacadas de nuestra comunidad.</h2>
+          </div>
+          <div class="community-heading">
+            <p class="muted-copy">Conoce las novedades más recientes de nuestra comunidad.</p>
+            <button class="button button-primary admin-only" id="new-news-button" type="button" hidden>Publicar noticia</button>
+          </div>
+          <div class="news-carousel" id="news-carousel" role="group" aria-roledescription="carrusel" aria-label="Noticias recientes">
+            <div class="news-feed" id="news-feed">
+              <p class="empty-state">Cargando publicaciones...</p>
+            </div>
+            <div class="news-carousel-controls" id="news-carousel-controls" hidden>
+              <span class="news-carousel-position" id="news-carousel-position" aria-live="polite"></span>
+              <div class="news-carousel-dots" id="news-carousel-dots" role="group" aria-label="Seleccionar noticia"></div>
+              <div class="news-carousel-arrows">
+                <button class="news-carousel-arrow" id="news-previous" type="button" aria-label="Ver noticia anterior">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6" /></svg>
+                </button>
+                <button class="news-carousel-arrow" id="news-next" type="button" aria-label="Ver noticia siguiente">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a href="index.html" class="brand footer-brand"><img class="brand-logo" src="logo-tppg.jpg" alt="" /><span><strong>T.P.P.G.</strong><small>Puerto Gaitán, Meta</small></span></a>
+        <div class="footer-links"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="archivos.html">Archivos compartidos</a><a href="contacto.html">Contacto</a></div>
+        <p>© <span id="year"></span> T.P.P.G. Puerto Gaitán</p>
+      </div>
+    </footer>
+    <dialog class="app-dialog" id="login-dialog" aria-labelledby="login-title">
+      <div class="dialog-heading"><div><p class="eyebrow accent">Administración T.P.P.G.</p><h2 id="login-title">Iniciar sesión</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button></div>
+      <p class="demo-warning">Acceso temporal de demostración. Las credenciales y los datos guardados en este navegador no son seguros para producción.</p>
+      <form class="module-form" id="login-form">
+        <label><span>Usuario</span><input type="text" name="username" autocomplete="username" required /></label>
+        <label><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required /></label>
+        <p class="form-message" id="login-message" role="alert"></p>
+        <button class="button button-primary" type="submit">Entrar como administrador</button>
+      </form>
+    </dialog>
+    <dialog class="app-dialog" id="news-dialog" aria-labelledby="news-form-title">
+      <div class="dialog-heading"><div><p class="eyebrow accent">Muro T.P.P.G.</p><h2 id="news-form-title">Publicar noticia</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button></div>
+      <form class="module-form" id="news-form">
+        <label><span>Título</span><input type="text" name="title" maxlength="140" required /></label>
+        <label><span>Descripción</span><textarea name="description" rows="5" maxlength="3000" required></textarea></label>
+        <label><span>Imagen opcional (JPG, PNG o WebP; máximo 5 MB). Si no adjuntas una, se intentará obtener del enlace.</span><input type="file" name="image" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" /></label>
+        <label><span>Enlace de la noticia o red social</span><input type="url" name="socialUrl" placeholder="https://..." /></label>
+        <label><span>Enlaces externos (uno por línea)</span><textarea name="externalLinks" rows="3" placeholder="https://..."></textarea></label>
+        <p class="form-message" id="news-message" role="alert"></p>
+        <button class="button button-primary" type="submit">Publicar noticia</button>
+      </form>
+    </dialog>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

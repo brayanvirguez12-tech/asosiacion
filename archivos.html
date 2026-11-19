@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Consulta y descarga documentos y recursos de T.P.P.G. Puerto Gaitán." />
+    <title>Archivos compartidos | T.P.P.G. Puerto Gaitán</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="archivos">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Inicio">
+          <img class="brand-logo" src="logo-tppg.jpg" alt="Logo oficial de T.P.P.G." />
+          <span><strong>T.P.P.G.</strong><small>Asociación de Técnicos de Producción de Petróleo y Gas de Puerto Gaitán</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="archivos.html" aria-current="page">Archivos compartidos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <button class="button button-secondary auth-button" id="auth-action" type="button">Iniciar sesión</button>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero files-page-hero">
+        <div class="container page-hero-content">
+          <p class="eyebrow">Biblioteca técnica</p>
+          <h1>Archivos compartidos</h1>
+          <p>Documentos, presentaciones y recursos disponibles para consulta de la comunidad.</p>
+        </div>
+      </section>
+      <section class="section page-content">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow accent">Recursos T.P.P.G.</p>
+            <h2>Material técnico organizado para encontrar lo que necesitas.</h2>
+          </div>
+          <div class="files-toolbar">
+            <label class="files-search-label" for="file-search">
+              <span>Buscar archivos</span>
+              <input id="file-search" type="search" placeholder="Nombre, descripción o formato" autocomplete="off" />
+            </label>
+            <label class="file-toolbar-label" for="file-category-filter"><span>Categoría</span>
+              <select id="file-category-filter" class="category-filter">
+                <option value="">Todas las categorías</option>
+                <option>Documentos</option><option>Capacitación</option><option>Informes</option>
+                <option>Recursos técnicos</option><option>Imágenes</option><option>Otros</option>
+              </select>
+            </label>
+            <label class="file-toolbar-label" for="file-sort-filter"><span>Ordenar por</span>
+              <select id="file-sort-filter" class="category-filter">
+                <option value="newest">Más recientes</option>
+                <option value="oldest">Más antiguos</option>
+                <option value="title">Nombre (A-Z)</option>
+              </select>
+            </label>
+            <div class="files-toolbar-actions">
+              <button class="button button-primary admin-only" id="new-file-button" type="button" hidden>Subir archivo</button>
+              <p class="files-count" id="files-count" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="files-list" id="files-list" aria-live="polite">
+            <p class="empty-state">Cargando archivos...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a href="index.html" class="brand footer-brand"><img class="brand-logo" src="logo-tppg.jpg" alt="" /><span><strong>T.P.P.G.</strong><small>Puerto Gaitán, Meta</small></span></a>
+        <div class="footer-links"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="noticias.html">Noticias</a><a href="contacto.html">Contacto</a></div>
+        <p>© <span id="year"></span> T.P.P.G. Puerto Gaitán</p>
+      </div>
+    </footer>
+    <dialog class="app-dialog" id="login-dialog" aria-labelledby="login-title">
+      <div class="dialog-heading"><div><p class="eyebrow accent">Administración T.P.P.G.</p><h2 id="login-title">Iniciar sesión</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button></div>
+      <p class="demo-warning">Acceso temporal de demostración. Las credenciales y los datos guardados en este navegador no son seguros para producción.</p>
+      <form class="module-form" id="login-form">
+        <label><span>Usuario</span><input type="text" name="username" autocomplete="username" required /></label>
+        <label><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required /></label>
+        <p class="form-message" id="login-message" role="alert"></p>
+        <button class="button button-primary" type="submit">Entrar como administrador</button>
+      </form>
+    </dialog>
+    <dialog class="app-dialog" id="file-dialog" aria-labelledby="file-form-title">
+      <div class="dialog-heading"><div><p class="eyebrow accent">Biblioteca T.P.P.G.</p><h2 id="file-form-title">Subir archivo</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Cerrar">×</button></div>
+      <form class="module-form" id="file-form">
+        <label><span>Archivo (máximo 25 MB por archivo)</span><input type="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.txt,.csv,.zip" required /></label>
+        <label><span>Nombre del documento</span><input type="text" name="title" maxlength="140" required /></label>
+        <label><span>Descripción</span><textarea name="description" rows="3" maxlength="1000"></textarea></label>
+        <label><span>Categoría</span><select name="category" required>
+          <option value="Documentos">Documentos</option><option value="Capacitación">Capacitación</option><option value="Informes">Informes</option>
+          <option value="Recursos técnicos">Recursos técnicos</option><option value="Imágenes">Imágenes</option><option value="Otros">Otros</option>
+        </select></label>
+        <p class="form-message" id="file-message" role="alert"></p>
+        <button class="button button-primary" type="submit">Subir y publicar</button>
+      </form>
+    </dialog>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
